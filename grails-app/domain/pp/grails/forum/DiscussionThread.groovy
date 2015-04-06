@@ -1,5 +1,7 @@
 package pp.grails.forum
 
+import pp.grails.forum.Comment
+
 class DiscussionThread {
 
     static belongsTo = Topic
@@ -10,5 +12,9 @@ class DiscussionThread {
     Date createDate = new Date()
 
     static constraints = {
+    }
+
+    public long getNumberOfReplies() {
+        Comment.countByThread(this)
     }
 }

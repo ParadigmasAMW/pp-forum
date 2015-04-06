@@ -1,5 +1,7 @@
 package pp.grails.forum
 
+import pp.grails.forum.DiscussionThread
+
 class Comment {
 
     static belongsTo = DiscussionThread
